@@ -1,0 +1,78 @@
+<div class="main">
+  <ng-container *ngIf="firstStepActive">
+    <div class="wrapper">
+      <div class="first-step">
+        <h1>Verify to continue</h1>
+        <p>In order to start the Metabolism Assessment Survey, you need to confirm your email address.</p>
+        <form [formGroup]="authorizationForm" (ngSubmit)="onLoginUser()">
+          <label for="email">Email Address</label>
+          <input type="email"
+                 id="email"
+                 [formControlName]="'email'"
+                 name="email">
+          <div class="btn-row">
+            <button type="submit"
+                    [disabled]="authorizationForm.invalid || busy"
+                    class="btn-default">Verify</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="secondStepActive">
+    <div class="second-step">
+      <h1 class="title">Enter your temporary password</h1>
+      <a class="go-back" (click)="resetForm(true)">
+        <div>
+          <img src="/assets/icons/right-arrow.svg">
+          <span>Go Back</span>
+        </div>
+      </a>
+      <p class="info">A One Time Password has been sent to abc@xyz.com</p>
+      <p class="info">Please enter the 4 digit code sent to abc@xyz.com.</p>
+      <form [formGroup]="validateForm" (ngSubmit)="onVerifyCode()">
+        <div class="input-row">
+          <input type="tel" maxlength="1" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false"
+                 (keypress)="onNewValue($event, 'firstNumber')" [(ngModel)]="code.firstNumber" appMoveNextByMaxLength
+                 class="confirm-code-input" formControlName="firstNumber" name="first-number">
+          <input type="tel" maxlength="1" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false"
+                 (keypress)="onNewValue($event, 'secondNumber')" [(ngModel)]="code.secondNumber" appMoveNextByMaxLength
+                 class="confirm-code-input" formControlName="secondNumber" name="second-number">
+          <input type="tel" maxlength="1" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false"
+                 (keypress)="onNewValue($event, 'thirdNumber')" [(ngModel)]="code.thirdNumber" appMoveNextByMaxLength
+                 class="confirm-code-input" formControlName="thirdNumber" name="third-number">
+          <input type="tel" maxlength="1" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false"
+                 (keypress)="onNewValue($event, 'forthNumber')" [(ngModel)]="code.forthNumber" appMoveNextByMaxLength
+                 class="confirm-code-input" formControlName="forthNumber" name="forth-number">
+        </div>
+        <div class="button-row">
+          <button class="btn-default"
+                  [disabled]="validateForm.invalid || busy"
+                  type="submit">Validate password</button>
+          <button class="btn-default btn-white"
+                  type="button"
+                  [disabled]="busy"
+                  (click)="resendPassword()">Resend password</button>
+          <button class="btn-default btn-white"
+                  [disabled]="busy"
+                  type="button"
+                  (click)="resetForm()">Change email</button>
+        </div>
+      </form>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="!firstStepActive && !secondStepActive">
+    <div class="third-step">
+      <div class="icon-checked">
+        <img src="/assets/icons/tick.svg">
+      </div>
+      <h3 class="title">Verified!</h3>
+      <p class="info">Volla! You have successfully verified the email.</p>
+      <div class="btn-row">
+        <a [routerLink]="['/quiz']" class="btn-default">Begin the survey</a>
+      </div>
+    </div>
+  </ng-container>
+</div>
+<app-footer [footerSmall]="false"></app-footer>
+

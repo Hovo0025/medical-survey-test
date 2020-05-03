@@ -1,0 +1,35 @@
+<form [formGroup]="questionForm" (ngSubmit)="onSubmit()">
+  <h1 class="question-title">{{questionItem.question[0].title}}</h1>
+  <p class="subtitle">{{questionItem.question[0].subtitle}}</p>
+  <div class="options-row">
+    <div class="option no-text-selection" *ngFor="let option of questionItem.question[0].options">
+      <input type="radio"
+             [value]="option"
+             (change)="onChange()"
+             [formControlName]="'country'"
+             [id]="option"
+             name="country">
+      <label [for]="option">
+        <div class="radio-border-content">
+          <div class="radio-border-outer">
+            <div class="radio-border-inner"></div>
+          </div>
+        </div>
+        {{option}}
+      </label>
+    </div>
+  </div>
+</form>
+<div class="country-input">
+  <input type="text"
+         name="country"
+         placeholder="Type your country here"
+         [(ngModel)]="newCountry"
+         (input)="addNewCountry($event)">
+</div>
+<div class="btn-row">
+  <a class="btn-default next-btn" (click)="onSubmit()">
+    <span>Next question</span>
+    <img src="/assets/icons/btn-arrow-right.svg" alt="">
+  </a>
+</div>

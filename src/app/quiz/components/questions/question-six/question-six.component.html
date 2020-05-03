@@ -1,0 +1,33 @@
+<form (ngSubmit)="onSubmit()">
+  <h1 class="question-title">{{questionItem.title}}</h1>
+  <div class="inf-row">
+    <div>Family members</div>
+    <div>High Blood Pressure</div>
+    <div>Excess Weight</div>
+    <div>Diabetes</div>
+  </div>
+  <div class="checkbox-row" *ngFor="let q of questionItem.question; let idx = index">
+    <div class="title">{{q.title}}</div>
+    <div class="option-row-item no-text-selection"
+         *ngFor="let option of q.options; let j = index">
+      <div class="checkob-option">
+        <input type="checkbox"
+               [checked]="q.answer[j]"
+               [name]="j"
+               (change)="onChange($event, idx, j)"
+               [id]="getFor(idx, j)">
+        <label [for]="getFor(idx, j)">
+          <div class="checkbox-item-txt">
+            <div class="checkbox"></div>
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+</form>
+<div class="btn-row">
+  <a class="btn-default next-btn" (click)="onSubmit()">
+    <span>Next question</span>
+    <img src="/assets/icons/btn-arrow-right.svg" alt="">
+  </a>
+</div>

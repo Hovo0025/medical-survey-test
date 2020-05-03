@@ -1,0 +1,51 @@
+<form [formGroup]="form"
+      [ngClass]="(smallRadio) ? 'small-radio': 'big-radio'"
+      (ngSubmit)="onSubmit()">
+  <h1 class="question-title">{{questionItem.question[0].title}}</h1>
+  <div *ngIf="unique" class="image-row">
+    <div class="img-item">
+      <img src="../../../../../assets/images/2-4/0.png" alt="">
+    </div>
+    <div class="img-item">
+      <img src="../../../../../assets/images/2-4/1.png" alt="">
+    </div>
+    <div class="img-item">
+      <img src="../../../../../assets/images/2-4/2.png" alt="">
+    </div>
+    <div class="img-item">
+      <img src="../../../../../assets/images/2-4/3.png" alt="">
+    </div>
+    <div class="img-item">
+      <img src="../../../../../assets/images/2-4/4.png" alt="">
+    </div>
+  </div>
+  <div [formArrayName]="'options'" class="option-row">
+    <div class="option no-text-selection"
+         *ngFor="let option of options; let i = index">
+        <input type="radio"
+               [value]="option"
+               [formControlName]="0"
+               [id]="option">
+
+        <label [for]="option">
+          <div class="img-content" *ngIf="!smallRadio">
+            <img [src]="getImage(i)" alt="">
+          </div>
+          <div class="btn-title">
+            <div class="radio-border-content">
+              <div class="radio-border-outer">
+                <div class="radio-border-inner"></div>
+              </div>
+            </div>
+            {{option}}
+          </div>
+        </label>
+    </div>
+  </div>
+</form>
+<div class="btn-row">
+  <a class="btn-default next-btn" (click)="onSubmit()">
+    <span>Next question</span>
+    <img src="/assets/icons/btn-arrow-right.svg" alt="">
+  </a>
+</div>

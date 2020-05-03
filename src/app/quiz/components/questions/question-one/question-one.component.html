@@ -1,0 +1,69 @@
+<form [formGroup]="questionForm" (ngSubmit)="onSubmit()">
+  <ng-container *ngIf="currentId === 10 && part === 0">
+    <app-question-ten></app-question-ten>
+  </ng-container>
+  <ng-container *ngIf="currentId === 11 && part === 0">
+    <app-question-eleven></app-question-eleven>
+  </ng-container>
+  <ng-container *ngIf="questionItem.question.length === 1; else simpleForm">
+    <h1 class="question-title">{{questionItem.question[0].title}}</h1>
+    <ng-container *ngIf="currentId === 12 || currentId === 13">
+      <app-question-twelve></app-question-twelve>
+    </ng-container>
+    <ng-container *ngIf="part === 1">
+      <div class="img-row second-part">
+        <img [src]="getImgPath(part, currentId)" alt="">
+      </div>
+    </ng-container>
+    <div [formArrayName]="'options'" class="option-row">
+      <div class="option no-text-selection"
+           *ngFor="let option of options">
+        <input type="radio"
+               [value]="option"
+               [formControlName]="0"
+               [id]="option">
+        <label [for]="option">
+          <div class="radio-border-content">
+            <div class="radio-border-outer">
+              <div class="radio-border-inner"></div>
+            </div>
+          </div>
+          {{option}}
+        </label>
+      </div>
+    </div>
+  </ng-container>
+  <ng-template #simpleForm>
+    <div [formArrayName]="'options'" [ngClass]="{'third-part': part === 2}">
+      <div class="array-items" *ngFor="let q of questionItem.question; let i = index">
+        <h1 class="question-title"
+            [ngClass]="(i === questionItem.question.length - 1) ? 'last-item' : ''">
+          {{questionItem.question[i].title}}
+        </h1>
+        <div class="option-row small">
+          <div class="option no-text-selection"
+               *ngFor="let option of q.options">
+            <input type="radio"
+                   [value]="option"
+                   [formControlName]="i"
+                   [id]="option">
+            <label [for]="option">
+              <div class="radio-border-content">
+                <div class="radio-border-outer">
+                  <div class="radio-border-inner"></div>
+                </div>
+              </div>
+              {{option}}
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <div class="btn-row">
+    <a class="btn-default next-btn" (click)="onSubmit()">
+      <span>Next question</span>
+      <img src="/assets/icons/btn-arrow-right.svg" alt="">
+    </a>
+  </div>
+</form>

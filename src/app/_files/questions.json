@@ -1,0 +1,626 @@
+[
+  {
+    "questions": [
+      {
+        "id": 1,
+        "question": [
+          {
+            "title": "How would you describe your overall health at this time?",
+            "subtitle": null,
+            "options": [
+              "Good overall health",
+              "A few health concerns",
+              "Medical problems for which I take medication"
+            ],
+            "answer": null
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "question": [
+          {
+            "title": "What is your height and weight?",
+            "subtitle": null,
+            "options": null,
+            "answer": {
+              "height": null,
+              "weight": null,
+              "bmi": null
+            }
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "question": [
+          {
+            "title": "What is your age?",
+            "subtitle": "(to assess your metabolic profile)",
+            "options": [
+              "Below 30 yrs",
+              "30 - 50 yrs",
+              "50 - 70 yrs",
+              "Above 70 yrs"
+            ],
+            "answer": "Below 30 yrs"
+          },
+          {
+            "title": "What is your gender?",
+            "subtitle": null,
+            "options": [
+              "Male",
+              "Female",
+              "Other"
+            ],
+            "answer": "Other"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "question": [
+          {
+            "title": "Ethnicity / Family Origins",
+            "subtitle": "(for assessing genetic risk factors)",
+            "options": [
+              "African",
+              "African American",
+              "Arab",
+              "Asian",
+              "Hawaiian / Pacific Islander",
+              "Hispanic / Latino",
+              "Caucasian",
+              "Caribbean",
+              "Native American",
+              "Other"
+            ],
+            "answer": null
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "question": [
+          {
+            "title": "Have you experienced any of these symptoms in the last three years?",
+            "subtitle": null,
+            "options": [
+               "Adult acne",
+               "Premature hair-loss",
+               "Dark patches around eyes or neck",
+               "Chronic fatigue",
+               "I have none of the above"
+            ],
+            "answer": [
+              false, false, false, false, false
+            ]
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "Which of your family members has any of these conditions?",
+        "question": [
+          {
+            "title": "Maternal Grandmother",
+            "subtitle": null,
+            "options": [
+              "High Blood Pressure",
+              "Excess Weight",
+              "Diabetes"
+            ],
+            "answer": [false, false, false]
+          },
+          {
+            "title": "Maternal Grandfather",
+            "subtitle": null,
+            "options": [
+              "High Blood Pressure",
+              "Excess Weight",
+              "Diabetes"
+            ],
+            "answer": [false, false, false]
+          },
+          {
+            "title": "Paternal Grandmother",
+            "subtitle": null,
+            "options": [
+              "High Blood Pressure",
+              "Excess Weight",
+              "Diabetes"
+            ],
+            "answer": [false, false, false]
+          },
+          {
+            "title": "Paternal Grandfather",
+            "subtitle": null,
+            "options": [
+              "High Blood Pressure",
+              "Excess Weight",
+              "Diabetes"
+            ],
+            "answer": [false, false, false]
+          },
+          {
+            "title": "Uncles",
+            "subtitle": null,
+            "options": [
+              "High Blood Pressure",
+              "Excess Weight",
+              "Diabetes"
+            ],
+            "answer": [false, false, false]
+          },
+          {
+            "title": "Aunts",
+            "subtitle": null,
+            "options": [
+              "High Blood Pressure",
+              "Excess Weight",
+              "Diabetes"
+            ],
+            "answer": [false, false, false]
+          },
+          {
+            "title": "Father",
+            "subtitle": null,
+            "options": [
+              "High Blood Pressure",
+              "Excess Weight",
+              "Diabetes"
+            ],
+            "answer": [false, false, false]
+          },
+          {
+            "title": "Mother",
+            "subtitle": null,
+            "options": [
+              "High Blood Pressure",
+              "Excess Weight",
+              "Diabetes"
+            ],
+            "answer": [false, false, false]
+          },
+          {
+            "title": "Sister/s",
+            "subtitle": null,
+            "options": [
+              "High Blood Pressure",
+              "Excess Weight",
+              "Diabetes"
+            ],
+            "answer": [false, false, false]
+          },
+          {
+            "title": " Brother/s",
+            "subtitle": null,
+            "options": [
+              "High Blood Pressure",
+              "Excess Weight",
+              "Diabetes"
+            ],
+            "answer": [false, false, false]
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "question": [
+          {
+            "title": "Have you been treated for any of the following conditions?",
+            "subtitle": null,
+            "options": [
+              "High blood pressure",
+              "High blood sugar",
+              "High triglycerides",
+              "I have none of the above"
+            ],
+            "answer": [
+              false, false, false, false, false
+            ]
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "question": [
+          {
+            "title": "Do you have any of the following?",
+            "subtitle": null,
+            "options": [
+              "Prediabetes",
+              "Diabetes",
+              "Gestational Diabetes",
+              "I have none of the above"
+            ],
+            "answer": null
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "question": [
+          {
+            "title": "If you have been diagnosed with diabetes, are your blood sugars well under control?",
+            "subtitle": null,
+            "options": [
+              "Yes",
+              "No"
+            ],
+            "answer": null
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "question": [
+          {
+            "title": "Have you ever been diagnosed with low thyroid function?",
+            "subtitle": null,
+            "options": [
+              "Yes",
+              "No"
+            ],
+            "answer": null
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "question": [
+          {
+            "title": "Have you ever been diagnosed with low testosterone?",
+            "subtitle": null,
+            "options": [
+              "Yes",
+              "No"
+            ],
+            "answer": null
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "question": [
+          {
+            "title": "Do you know your birthweight?",
+            "subtitle": null,
+            "options": [
+              "Yes",
+              "No"
+            ],
+            "answer": null
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "question": [
+          {
+            "title": "What was your birthweight?",
+            "subtitle": null,
+            "options": [
+              "Less than 6.5lbs",
+              "Between 7 - 9lbs",
+              "More than 9lbs"
+            ],
+            "answer": null
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "question": [
+          {
+            "title": "Does your body weight frequently go up and down 5lbs or 2.2kg?",
+            "subtitle": null,
+            "options": [
+              "Yes",
+              "No"
+            ],
+            "answer": null
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "question": [
+          {
+            "title": "Have you gained unwanted weight in the last 5 years?",
+            "subtitle": null,
+            "options": [
+              "Less than 5lbs",
+              "Between 5lbs - 10lbs",
+              "Between 10lbs - 20lbs",
+              "More than 20lbs"
+            ],
+            "answer": null
+          },
+          {
+            "title": "Is your excess weight largely in your stomach or hips?",
+            "subtitle": null,
+            "options": [
+              "Yes",
+              "No"
+            ],
+            "answer": null
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "question": [
+          {
+            "title": "Is it hard for you to lose weight despite regular exercise and diet control?",
+            "subtitle": null,
+            "options": [
+              "Yes",
+              "No"
+            ],
+            "answer": null
+          },
+          {
+            "title": "How many times have you tried weight-loss or diet programs?",
+            "subtitle": null,
+            "options": [
+              "Once",
+              "Twice",
+              "Three or more",
+              "Not tried"
+            ],
+            "answer": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "questions": [
+      {
+        "id": 1,
+        "question": [
+          {
+            "title": "How would you describe your daily diet?",
+            "subtitle": null,
+            "options": [
+              "Eat most foods",
+              "How would you describe your daily diet?",
+              "Gluten-free",
+              "Lactose-free",
+              "Ketogenic fasting",
+              "Intermittent fasting",
+              "Ethnic cuisine",
+              "Other"
+            ],
+            "answer": [
+              false, false, false, false, false, false, false, false
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "question": [
+          {
+            "title": "What do you most often do for food?",
+            "subtitle": " (Choose one)",
+            "options": [
+              "Cook at home",
+              "Order in",
+              "Eat out"
+            ],
+            "answer": null
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "question": [
+          {
+            "title": "Do you tend to skip meals?",
+            "subtitle": null,
+            "options": [
+              "Almost never",
+              "1 - 2 times a month",
+              "2 - 3 times a week",
+              "Almost daily"
+            ],
+            "answer": null
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "question": [
+          {
+            "title": "Do you restrict these food staples from your daily diet?",
+            "subtitle": null,
+            "options": [
+              "Almost never",
+              "3 - 4 times a month",
+              "Less than once a week",
+              "Almost daily"
+            ],
+            "answer": null
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "question": [
+          {
+            "title": "How many servings of vegetables do you eat per day?",
+            "subtitle": " (one serving = 1/2 cup)",
+            "options": [
+              "0 servings per day",
+              "1 - 3 servings per day",
+              "3 - 5 servings per day"
+            ],
+            "answer": null
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "question": [
+          {
+            "title": "Does your daily diet include any types of nuts or beans?",
+            "subtitle": null,
+            "options": [
+              "Almost everyday",
+              "3 - 4 times a week",
+              "1 - 2 times a month"
+            ],
+            "answer": null
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "question": [
+          {
+            "title": "How would you describe your body’s digestion efficiency?",
+            "subtitle": null,
+            "options": [
+              "Regular bowel movements",
+              "Occasional constipation",
+              "Frequent constipation"
+            ],
+            "answer": null
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "question": [
+          {
+            "title": "How many times a week do you have juice or a smoothie?",
+            "subtitle": null,
+            "options": [
+              "Almost never",
+              "1 - 3 times a week",
+              "3 - 5 times a week"
+            ],
+            "answer": null
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "question": [
+          {
+            "title": "Do you experience food cravings between meals?",
+            "subtitle": null,
+            "options": [
+              "Almost never",
+              "2 - 3 times a month",
+              "More than once a week"
+            ],
+            "answer": null
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "question": [
+          {
+            "title": "How often do you know the ingredients or the calorie content of the food that you purchase?",
+            "subtitle": null,
+            "options": [
+              "Almost always",
+              "Less than 50% of the time",
+              "Less than 20% of the time"
+            ],
+            "answer": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "questions": [
+      {
+        "id": 1,
+        "question": [
+          {
+            "title": "How would you describe your exercise routine?",
+            "subtitle": null,
+            "options": [
+              "Mild",
+              "Moderate",
+              "Intense"
+            ],
+            "answer": null
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "question": [
+          {
+            "title": "How frequently do you exercise?",
+            "subtitle": null,
+            "options": [
+              "Seldom to never",
+              "Less than 2 times a week",
+              "Most days"
+            ],
+            "answer": null
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "question": [
+          {
+            "title": "Check all that apply.",
+            "subtitle": null,
+            "options": [
+              "Visit a gym",
+              "Attend an exercise class",
+              "Walk to and from work or school daily"
+            ],
+            "answer": [
+              false, false, false
+            ]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "question": [
+          {
+            "title": "Do you work?",
+            "subtitle": null,
+            "options": [
+              "Yes",
+              "No"
+            ],
+            "answer": null
+          },
+          {
+            "title": "How many hours per day on average?",
+            "subtitle": null,
+            "options": [
+              "Less than 8 hours daily",
+              "8 - 10 hours daily",
+              "10 + hours and/or take work home"
+            ],
+            "answer": null
+          },
+          {
+            "title": "How long is your commute each day?",
+            "subtitle": null,
+            "options": [
+              "Less than an hour",
+              "More than 1 hour",
+              "More than 2 hours"
+            ],
+            "answer": null
+          }
+        ]
+      }
+    ]
+  }
+]

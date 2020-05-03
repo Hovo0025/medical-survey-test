@@ -1,0 +1,103 @@
+<ng-container *ngIf="part === 1">
+  <div class="second-part">
+    <form [formGroup]="questionForm" (ngSubmit)="onSubmit()">
+      <h1 class="question-title">{{questionItem.question[0].title}}</h1>
+      <div class="checkbox-row">
+        <div [formArrayName]="'options'" *ngFor="let option of questionForLoop; let i = index">
+          <input type="checkbox"
+                 [formControlName]="i"
+                 [name]="option"
+                 (input)="changeLastItem()"
+                 [id]="option"
+                 [value]="option">
+          <label [for]="option">
+            <div class="checkbox-item-txt">
+              <div class="checkbox"></div>
+              <span>{{option}}</span>
+            </div>
+          </label>
+        </div>
+        <div class="last-option-row no-text-selection">
+          <input type="checkbox"
+                 [formControlName]="'itemControl'"
+                 [name]="lastItemValue"
+                 [id]="lastItemValue"
+                 (input)="onSelectLastItem($event)"
+                 [checked]="lastItemChecked"
+                 [value]="lastItemChecked">
+          <label [for]="lastItemValue">
+            <div class="checkbox-item-txt">
+              <div class="checkbox"></div>
+              <span>{{lastItemValue}}</span>
+            </div>
+          </label>
+        </div>
+      </div>
+    </form>
+  </div>
+</ng-container>
+<ng-container *ngIf="part === 0">
+  <form [formGroup]="questionForm" (ngSubmit)="onSubmit()">
+    <h1 class="question-title">{{questionItem.question[0].title}}</h1>
+    <div class="checkbox-row" [formArrayName]="'options'">
+      <div *ngFor="let option of questionForLoop; let i = index">
+        <input type="checkbox"
+               [formControlName]="i"
+               [name]="option"
+               (input)="changeLastItem()"
+               [id]="option"
+               [value]="option">
+        <label [for]="option">
+          <img [src]="getImagePath(i)" [alt]="option">
+          <div class="checkbox-item-txt">
+            <div class="checkbox"></div>
+            <span>{{option}}</span>
+          </div>
+        </label>
+      </div>
+    </div>
+    <div class="last-option-row no-text-selection">
+      <input type="checkbox"
+             [formControlName]="'itemControl'"
+             [name]="lastItemValue"
+             [id]="lastItemValue"
+             (input)="onSelectLastItem($event)"
+             [checked]="lastItemChecked"
+             [value]="lastItemChecked">
+      <label [for]="lastItemValue">
+        <div class="checkbox-item-txt">
+          <div class="checkbox"></div>
+          <span>{{lastItemValue}}</span>
+        </div>
+      </label>
+    </div>
+  </form>
+</ng-container>
+<ng-container *ngIf="part === 2">
+  <form [formGroup]="questionForm" (ngSubmit)="onSubmit()">
+    <h1 class="question-title">{{questionItem.question[0].title}}</h1>
+    <div class="checkbox-row" [formArrayName]="'options'">
+      <div *ngFor="let option of questionOptions; let i = index">
+        <input type="checkbox"
+               [formControlName]="i"
+               [name]="option"
+               (input)="changeLastItem()"
+               [id]="option"
+               [value]="option">
+        <label [for]="option">
+          <img [src]="getImagePath(i)" [alt]="option">
+          <div class="checkbox-item-txt">
+            <div class="checkbox"></div>
+            <span>{{option}}</span>
+          </div>
+        </label>
+      </div>
+    </div>
+  </form>
+</ng-container>
+<div class="btn-row">
+  <a class="btn-default next-btn" (click)="onSubmit()">
+    <span>Next question</span>
+    <img src="/assets/icons/btn-arrow-right.svg" alt="">
+  </a>
+</div>

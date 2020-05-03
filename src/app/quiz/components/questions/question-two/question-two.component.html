@@ -1,0 +1,41 @@
+<form [formGroup]="questionForm" (ngSubmit)="onSubmit()">
+  <h1 class="question-title">{{questionItem.question[0].title}}</h1>
+  <div class="input-row">
+    <div class="height">
+      <div class="options">
+        <div class="title">HEIGHT</div>
+        <div class="option">
+          <span>In</span>
+          <span>Cm</span>
+        </div>
+      </div>
+      <input type="number" name="height" [formControlName]="'height'">
+    </div>
+    <div class="weight">
+      <div class="options">
+        <div class="title">WEIGHT</div>
+        <div class="option">
+          <span>Lbs</span>
+          <span>Kg</span>
+        </div>
+      </div>
+      <input type="number" name="weight" [formControlName]="'weight'">
+    </div>
+  </div>
+  <div class="btn-row bmi">
+    <button type="submit"
+            [disabled]="questionForm.invalid"
+            class="btn-default">Calculate BMI</button>
+  </div>
+</form>
+<ng-container *ngIf="bmi && questionForm.valid">
+  <div class="bmi-info">
+    Your body mass index (BMI) is: <span>{{bmi}}</span>
+  </div>
+  <div class="btn-row">
+    <a class="btn-default next-btn" (click)="onNavigateNext()">
+      <span>Next question</span>
+      <img src="/assets/icons/btn-arrow-right.svg" alt="">
+    </a>
+  </div>
+</ng-container>

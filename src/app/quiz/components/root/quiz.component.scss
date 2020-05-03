@@ -1,0 +1,60 @@
+.question-title {
+  text-align: center;
+  font-size: 25px;
+  line-height: 33px;
+}
+
+
+// input radio
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  display: inline-block;
+  background-color: #ddd;
+  padding: 4px 11px;
+  font-family: Arial;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+  input[type="radio"]:checked+label {
+  background-color: #98D881;
+  .radio-border-outer {
+    border: 2px solid #2E2E2E;
+    transition: border-color ease 280ms;
+  }
+
+  .radio-border-outer .radio-border-inner {
+    width: 8px;
+    height: 8px;
+    background: #2E2E2E;
+    border-radius: 50%;
+    transition: background-color ease 280ms,-webkit-transform ease 280ms;
+    transition: transform ease 280ms,background-color ease 280ms;
+    transition: transform ease 280ms,background-color ease 280ms,-webkit-transform ease 280ms;
+  }
+}
+
+.radio-border-content {
+  width: 16px;
+  height: 16px;
+  margin: 0 8px;
+}
+
+.radio-border-outer {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #E5E8F1;
+  border: 2px solid #2E2E2E;
+  border-radius: 50%;
+  transition: border-color ease 280ms;
+  cursor: pointer;
+}
+
+// input checkbox
+

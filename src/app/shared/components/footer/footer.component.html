@@ -1,0 +1,27 @@
+<ng-container *ngIf="footerSmall; else footerBig">
+  <div class="footer small">
+    <div class="inner-content">
+      Copyright © MetaKura 2019
+    </div>
+  </div>
+</ng-container>
+<ng-template #footerBig>
+  <div class="footer big">
+    <div class="border"></div>
+    <div class="bottom-content">
+      I understand that the survey is not a medical report. I waive, release, and discharge from any and all
+      liability, including but not limited to, liability arising from the negligence or fault of the entities or
+      persons released, for my disability, personal injury, property damage, property theft, or actions of any kind
+      which may hereafter occur to me, the following entities or persons: MetaKura and/or their directors, officers,
+      employees, volunteers, representatives, and agents, and the activity holders, sponsors, and volunteers. I
+      indemnify, hold harmless and agree not to sue the entities or persons mentioned in this paragraph from any and
+      all liabilities or claims made as a result of participation in this activity, whether caused by the negligence
+      of release or otherwise.
+    </div>
+    <div class="border"></div>
+    <div class="inner-content">
+      Copyright © MetaKura 2019
+    </div>
+  </div>
+</ng-template>
+

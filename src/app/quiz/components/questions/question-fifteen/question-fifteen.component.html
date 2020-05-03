@@ -1,0 +1,35 @@
+<form [formGroup]="questionForm" (ngSubmit)="onSubmit()">
+  <ng-container *ngIf="currentId === 10">
+    <app-question-ten></app-question-ten>
+  </ng-container>
+  <ng-container *ngIf="currentId === 11">
+    <app-question-eleven></app-question-eleven>
+  </ng-container>
+  <h1 class="question-title">{{questionItem.question[0].title}}</h1>
+  <ng-container *ngIf="currentId === 12 || currentId === 13">
+    <app-question-twelve></app-question-twelve>
+  </ng-container>
+  <div class="option-row">
+    <div class="option no-text-selection"
+         *ngFor="let option of options">
+      <input type="radio"
+             [value]="option"
+             [formControlName]="'option'"
+             [id]="option">
+      <label [for]="option">
+        <div class="radio-border-content">
+          <div class="radio-border-outer">
+            <div class="radio-border-inner"></div>
+          </div>
+        </div>
+        {{option}}
+      </label>
+    </div>
+  </div>
+  <div class="btn-row">
+    <a class="btn-default next-btn" (click)="onSubmit()">
+      <span>Next question</span>
+      <img src="/assets/icons/btn-arrow-right.svg" alt="">
+    </a>
+  </div>
+</form>

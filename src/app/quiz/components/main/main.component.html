@@ -1,0 +1,125 @@
+<app-general-information [current]="currentId" [part]="activePart" [partLength]="questionListLength"></app-general-information>
+<ng-container *ngIf="readyToLoad">
+  <ng-container [ngSwitch]="activePart">
+    <ng-container *ngSwitchCase="0">
+      <ng-container [ngSwitch]="currentId">
+        <ng-container *ngSwitchCase="1">
+          <app-question-one [question]="questionItem" (submitted)="onFormSubmit($event)"></app-question-one>
+        </ng-container>
+        <ng-container *ngSwitchCase="2">
+          <app-question-two [question]="questionItem" (submitted)="onFormSubmit($event)"></app-question-two>
+        </ng-container>
+        <ng-container *ngSwitchCase="3">
+          <app-question-three [question]="questionItem" (submitted)="onFormSubmit($event)"></app-question-three>
+        </ng-container>
+        <ng-container *ngSwitchCase="4">
+          <app-question-four [question]="questionItem" (submitted)="onFormSubmit($event)"></app-question-four>
+        </ng-container>
+        <ng-container *ngSwitchCase="5">
+          <app-question-five [question]="questionItem" (submitted)="onFormSubmit($event)"></app-question-five>
+        </ng-container>
+        <ng-container *ngSwitchCase="6">
+          <app-question-six [question]="questionItem" (submitted)="onFormSubmit($event)"></app-question-six>
+        </ng-container>
+        <ng-container *ngSwitchCase="7">
+          <app-question-five [question]="questionItem" (submitted)="onFormSubmit($event)"></app-question-five>
+        </ng-container>
+        <ng-container *ngSwitchCase="8">
+          <app-question-eight [question]="questionItem" (submitted)="onFormSubmit($event)"></app-question-eight>
+        </ng-container>
+        <ng-container *ngSwitchCase="9">
+          <app-question-one [question]="questionItem" (submitted)="onFormSubmit($event)"></app-question-one>
+        </ng-container>
+        <ng-container *ngSwitchCase="10">
+          <app-question-one [question]="questionItem" (submitted)="onFormSubmit($event)"></app-question-one>
+        </ng-container>
+        <ng-container *ngSwitchCase="11">
+          <app-question-one [question]="questionItem" (submitted)="onFormSubmit($event)"></app-question-one>
+        </ng-container>
+        <ng-container *ngSwitchCase="12">
+          <app-question-one [question]="questionItem" (submitted)="onFormSubmit($event)"></app-question-one>
+        </ng-container>
+        <ng-container *ngSwitchCase="13">
+          <app-question-one [question]="questionItem" (submitted)="onFormSubmit($event)"></app-question-one>
+        </ng-container>
+        <ng-container *ngSwitchCase="14">
+          <app-question-one [question]="questionItem" (submitted)="onFormSubmit($event)"></app-question-one>
+        </ng-container>
+        <ng-container *ngSwitchCase="15">
+          <app-question-one [question]="questionItem" (submitted)="onFormSubmit($event)"></app-question-one>
+        </ng-container>
+        <ng-container *ngSwitchCase="16">
+          <app-question-one [question]="questionItem" (submitted)="onFormSubmit($event)"></app-question-one>
+        </ng-container>
+      </ng-container>
+    </ng-container>
+    <ng-container *ngSwitchCase="1">
+      <ng-container [ngSwitch]="currentId">
+        <ng-container *ngSwitchCase="1">
+          <app-question-five [question]="questionItem"
+                             [part]="activePart"
+                             (submitted)="onFormSubmit($event)"></app-question-five>
+        </ng-container>
+        <ng-container *ngSwitchCase="2">
+          <app-second-one [question]="questionItem" (submitted)="onFormSubmit($event)"></app-second-one>
+        </ng-container>
+        <ng-container *ngSwitchCase="3">
+          <app-second-one [question]="questionItem"
+                          [smallRadio]="true"
+                          (submitted)="onFormSubmit($event)"></app-second-one>
+        </ng-container>
+        <ng-container *ngSwitchCase="4">
+          <app-second-one [question]="questionItem"
+                          [smallRadio]="true"
+                          [unique]="true"
+                          (submitted)="onFormSubmit($event)"></app-second-one>
+        </ng-container>
+        <ng-container *ngSwitchCase="5">
+          <app-question-one [question]="questionItem"
+                            [part]="activePart"
+                            (submitted)="onFormSubmit($event)"></app-question-one>
+        </ng-container>
+        <ng-container *ngSwitchCase="6">
+          <app-question-one [question]="questionItem"
+                            [part]="activePart"
+                            (submitted)="onFormSubmit($event)"></app-question-one>
+        </ng-container>
+        <ng-container *ngSwitchCase="7">
+          <app-question-one [question]="questionItem" (submitted)="onFormSubmit($event)"></app-question-one>
+        </ng-container>
+        <ng-container *ngSwitchCase="8">
+          <app-question-one [question]="questionItem"
+                            [part]="activePart"
+                            (submitted)="onFormSubmit($event)"></app-question-one>
+        </ng-container>
+        <ng-container *ngSwitchCase="9">
+          <app-question-one [question]="questionItem" (submitted)="onFormSubmit($event)"></app-question-one>
+        </ng-container>
+        <ng-container *ngSwitchCase="10">
+          <app-question-one [question]="questionItem"
+                            [part]="activePart"
+                            (submitted)="onFormSubmit($event)"></app-question-one>
+        </ng-container>
+      </ng-container>
+    </ng-container>
+    <ng-container *ngSwitchCase="2">
+      <ng-container [ngSwitch]="currentId">
+        <ng-container *ngSwitchCase="1">
+          <app-second-one [question]="questionItem" [part]="2" (submitted)="onFormSubmit($event)"></app-second-one>
+        </ng-container>
+        <ng-container *ngSwitchCase="2">
+          <app-question-one [question]="questionItem" (submitted)="onFormSubmit($event)"></app-question-one>
+        </ng-container>
+        <ng-container *ngSwitchCase="3">
+          <app-question-five [question]="questionItem"
+                             [part]="activePart"
+                             (submitted)="onFormSubmit($event)"></app-question-five>
+        </ng-container>
+        <ng-container *ngSwitchCase="4">
+          <app-question-one [question]="questionItem" [part]="activePart" (submitted)="onFormSubmit($event)"></app-question-one>
+        </ng-container>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+</ng-container>
+

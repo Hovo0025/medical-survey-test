@@ -1,0 +1,28 @@
+<div class="progress-bar-main">
+  <div class="progress-bar">
+    <button type="button"
+            [disabled]="onPrevDisabled()"
+            class="btn-prev no-text-selection" (click)="onNext()">
+      <img src="/assets/icons/left-arrow.svg" alt="">
+    </button>
+    <div class="progress-row">
+      <div class="point" *ngFor="let part of parts; let i = index">
+        <div class="active-bar"
+             [ngClass]="(i === 0) ? 'first': ''"
+             [ngStyle]="{'width' : getProgressPosition(part.partIndex, part.child)}">
+          <span class="active-circle" *ngIf="activePart === i"></span>
+        </div>
+        <div class="part">
+          <div class="static-circle"></div>
+          <div class="part-name">{{part.name}}</div>
+        </div>
+      </div>
+    </div>
+    <button type="button"
+            [disabled]="onNextDisabled()"
+            class="btn-next no-text-selection" (click)="onNext(true)">
+      <img src="/assets/icons/arrow-right.svg" alt="">
+    </button>
+  </div>
+</div>
+

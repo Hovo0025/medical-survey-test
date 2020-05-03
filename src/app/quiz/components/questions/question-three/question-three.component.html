@@ -1,0 +1,42 @@
+<div class="question-main">
+  <h1 class="question-title">{{questionItem.question[0].title}}</h1>
+  <p class="subtitle">{{questionItem.question[0].subtitle}}</p>
+  <div class="age">
+    <div class="dropdown">
+      <div class="select-dropdown no-text-selection" (click)="toggleOpened()">
+        {{age}}
+        <div class="custom-arrow-base" [ngClass]="(ageOpened) ? 'custom-arrow-up' : 'custom-arrow-down'"></div>
+        <div class="dropdown-options-main no-text-selection" [ngClass]="(ageOpened) ? 'block' : 'hide'">
+          <div class="dropdown-option"
+               *ngFor="let option of questionItem.question[0].options">
+            <div (click)="onSelect(option)">{{option}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="gender">
+    <div class="dropdown">
+      <h1 class="question-title">{{questionItem.question[1].title}}</h1>
+      <div class="select-dropdown no-text-selection" (click)="toggleOpened(true)">
+        {{gender}}
+        <div class="custom-arrow-base" [ngClass]="(genderOpened) ? 'custom-arrow-up' : 'custom-arrow-down'"></div>
+        <div class="dropdown-options-main no-text-selection" *ngIf="genderOpened">
+          <div class="dropdown-option"
+               *ngFor="let option of questionItem.question[1].options">
+            <div (click)="onSelect(option, true)">{{option}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="btn-row">
+  <a class="btn-default next-btn" (click)="onSubmit()">
+    <span>Next question</span>
+    <img src="/assets/icons/btn-arrow-right.svg" alt="">
+  </a>
+</div>
+
+
+

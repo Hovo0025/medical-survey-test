@@ -1,0 +1,54 @@
+<div class="wrapper">
+  <ng-container *ngIf="activePart === 0">
+    <div class="first-part">
+      <h1>INTRODUCTION</h1>
+      <div class="part-info">
+        DNA GIF
+      </div>
+      <div class="title">Each cell of your body undergoes thousands of enzyme reactions every second that provide energy
+        to keep you alive.
+      </div>
+      <p class="info">
+        The pattern of these activities are collectively known as your metabolism.
+      </p>
+      <p class="info">
+        As you tell us about yourself, we can help guide you to improve your health.
+      </p>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="activePart === 1">
+    <div class="second-part">
+      <h1>Part 2: Diet & Nutrition</h1>
+      <div class="part-info">
+        DIET & NUTRITION GIF
+      </div>
+      <div class="title">You probably know that carbohydrates from grains, fruit, alcohol and sugar are the main
+        culprits for unwanted weight gain.
+      </div>
+      <p class="info">
+        But did you know that one serving of pomegranates or bananas has the equivalent of three teaspoons of sugar?<br> (5
+        gms = 1 teaspoon) </p>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="activePart === 2">
+    <div class="third-part">
+      <h1>Part 3: Physical FITNESS</h1>
+      <div class="part-info">
+        PHYSICAL FITNESS GIF
+      </div>
+      <div class="title">
+        Physical exercise increases energy, reduces anxiety and depression.
+      </div>
+      <p class="info">
+        It improves cognitive ability and emotional stability.
+      </p>
+      <div class="info-bottom">
+        Source: Movement Science & Sports Psychology
+      </div>
+    </div>
+  </ng-container>
+</div>
+<div class="btn-row">
+  <a class="btn-default" [routerLink]="['1']">Next</a>
+</div>
+

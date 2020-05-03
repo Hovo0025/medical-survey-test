@@ -1,0 +1,19 @@
+.info-component {
+  margin-top: 28px;
+  text-align: center;
+  .user-info {
+    margin-bottom: 31px;
+    color: #5C90DB;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 24px;
+  }
+  .quiz-info {
+    margin-bottom: 18px;
+    p {
+      font-size: 15px;
+      font-weight: bold;
+      line-height: 19px;
+    }
+  }
+}

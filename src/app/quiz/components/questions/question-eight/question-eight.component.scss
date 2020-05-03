@@ -1,0 +1,49 @@
+.option-row {
+  display: flex;
+  margin-bottom: 90px;
+  margin-top: 45px;
+  position: relative;
+  justify-content: center;
+  height: 221px;
+  .big-radio {
+    label {
+      font-size: 15px;
+      cursor: pointer;
+      width: 203px;
+      height: 221px;
+      margin: 0 6px;
+      border-radius: 4px;
+      img {
+        width: 183px;
+        height: 142px;
+      }
+    }
+  }
+}
+
+.small-radio {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  width: 260px;
+  bottom: -72px;
+  justify-content: center;
+  display: flex;
+  label {
+    display: flex;
+    background: transparent;
+    align-items: center;
+    .radio-border-outer {
+      background: transparent;
+    }
+  }
+}
+
+.btn-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+}

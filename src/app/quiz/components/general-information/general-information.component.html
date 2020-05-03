@@ -1,0 +1,14 @@
+<div class="info-component">
+  <div class="user-info">
+    <ng-container *ngIf="part === 0">
+      MY PROFILE
+    </ng-container>
+    <ng-container *ngIf="part === 1">
+      Diet & Nutrition
+    </ng-container>
+  </div>
+  <div class="quiz-info">
+    <p>Question</p>
+    <p>{{current}}/{{partLength}}</p>
+  </div>
+</div>
